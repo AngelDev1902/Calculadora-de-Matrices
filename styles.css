@@ -1,0 +1,187 @@
+body{
+    background-color: #000021;
+    color: white;
+    display: grid;
+    place-items: center;
+}
+
+h1, h2, h3{
+    text-align: center;
+}
+
+.header{
+    width: 100%;
+}
+
+.header p{
+    text-align: center;
+}
+
+.operaciones ul{
+    display: grid;
+    place-items: center;
+    padding: 0;
+
+    gap: 1.5rem;
+}
+
+.operaciones ul li{
+    list-style: none;
+    width: 100%;
+}
+
+.cantidad-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem 0;
+    gap: 10px;
+}
+
+.cant{
+    width: 4rem;
+    height: 2rem;
+    font-size: 1.3rem;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+    color: white;
+}
+
+.btn{
+    width: 10rem;
+    height: 3rem;
+    background-color: transparent;
+    border: 3px solid rgb(16, 255, 223);
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    color: white;
+    font-size: 1rem;
+    padding: 5px 3px;
+}
+
+.inputM{
+    max-width: 2rem;
+    height: 1.5rem;
+    background-color: #181831;
+    border: none;
+    color: white;
+}
+
+.valorX{
+    margin: 0;
+}
+
+.matriz-container{
+    display: grid;
+    gap: 1rem;
+    place-items: center;
+    margin: 2rem 0;
+}
+
+.matriz-filas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.paso{
+    margin-bottom: 3rem;
+}
+
+.parrafo{
+    text-align: center;
+}
+
+.pFilas{
+    display:flex;
+    gap: 1rem;
+    text-align: center;
+    justify-content: center;
+}
+
+.pColumna{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+}
+
+.matriz-res::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    background-color: white;
+    right: 4.5rem;
+    top: 0;
+}
+
+.matriz-res{
+    width: fit-content;
+    padding: 0 2rem;
+    margin: 2rem auto 0;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    border-radius: 3rem;
+    position: relative;
+}
+
+.operacion{
+    width: fit-content;
+    padding: 0 2rem;
+    margin: 0 auto;
+    position: relative;
+}
+
+.pOperacion:last-of-type{
+    border-top: 2px solid white;
+}
+
+@media (min-width: 768px) {
+    body{
+        grid-template-areas: 
+            "header header header"
+            "opera datos datos"
+            "opera pasos pasos";
+    
+            gap: 3rem;
+        }
+
+    .header{
+        grid-area: header;
+    }
+
+    .operaciones{
+        grid-area: opera;
+        width: 200px;
+        align-self: start;
+        justify-self: end;
+    }
+
+    .cantidad-container{
+        flex-direction: row;
+    }
+
+    .datos{
+        grid-area: datos;
+    }
+
+    .pasos{
+        grid-area: pasos;
+    }
+}

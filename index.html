@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrices</title>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header container">
+        <h1>Calculadora de Matrices</h1>
+        <p>
+            Calculadora de matrices que te ayuda a resolver sistemas de 
+            ecuaciones lineales mediante distintos metodos
+        </p>
+    </div>
+
+    <div class="operaciones container">
+        <h2>Operaciones</h2>
+        <ul>
+            <li><button class="btn">Reduccion Gauss-Jordan</button></li>
+            <li><button class="btn">Determinante</button></li>
+            <li><button class="btn">Inversa</button></li>
+            <li><button class="btn">Transpuesta</button></li>
+            <li><button class="btn">Suma</button></li>
+            <li><button class="btn">Resta</button></li>
+            <li><button class="btn">Multiplicacion</button></li>
+        </ul>
+    </div>
+
+    <div class="datos container">
+        <div class="cantidad-container" id="cantidad-container">
+            <label for="cant-filas">Cantidad de Filas</label>
+            <input type="number" id="cant-filas" class="cant">
+            <p>X</p>
+            <input type="number" id="cant-columnas" class="cant">
+            <label for="cant-columnas">Cantidad de Columnas</label>
+        </div>
+    
+        <button onclick="crearMatriz()" class="btn">Crear</button>
+    
+        <div class="matriz-container"></div>
+    </div>
+
+    <div class="pasos container">
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
